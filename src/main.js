@@ -5,5 +5,5 @@ import store from './store'
 
 createApp(App)
   .use(router)
-  .user(store)
+  .use(store)
   .mount('#app')
