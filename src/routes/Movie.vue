@@ -16,8 +16,9 @@
     </template>
     <div v-else class="movie-details">
       <div 
-        :style="{ backgroundImage: `url(${theMovie.Poster})` }"
-        class="poster"></div>
+        :style="{ backgroundImage: `url(${requestDiffSizeImage(theMovie.Poster)})` }"
+        class="poster">
+      </div>
       <div class="specs">
         <div class="title">
           {{ theMovie.Title }}
@@ -80,7 +81,13 @@ export default {
     this.$store.dispatch('movie/searchMovieWithId', {
       id: this.$route.params.id
     })
+  },
+  methods: {
+    requestDiffSizeImage(url, size = 700) {
+      return url.replace('SX300', `SX${size}`)
+    }
   }
+
 }
 </script>
 
