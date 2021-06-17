@@ -17,6 +17,3 @@ export default {
 </script>
 
 
-<style land="scss">
-@import "~/scss/main"
-</style>

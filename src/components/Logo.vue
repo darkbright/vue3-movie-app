@@ -6,9 +6,7 @@
   </RouterLink>
 </template>
 
-<script lang="scss" scoped>
-@import "~/scss/main.scss";
-
+<style lang="scss" scoped>
 .logo {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
@@ -21,4 +19,4 @@
     color: $primary;
   }
 }
-</script>
+</style>
