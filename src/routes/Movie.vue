@@ -144,7 +144,6 @@ export default {
     }
   }
 }
-
 .movie-details {
   display: flex;
   color: $gray-600;
@@ -197,7 +196,6 @@ export default {
         }
       }
     }
-
     h3 {
       margin: 24px 0 6px;
       color: $black;
@@ -205,6 +203,34 @@ export default {
       font-size: 20px;
     }
   }
-}
 
+  @include media-breakpoint-down(xl) {
+    .poster {
+      width: 300px;
+      height: 300px * 3 / 2;
+      margin-right: 40px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    display: block;
+    .poster {
+      margin-bottom: 40px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .specs {
+      .title {
+        font-size: 50px;
+      }
+      .ratings {
+        .rating-wrap {
+          display: block;
+          .rating {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
 </style>
